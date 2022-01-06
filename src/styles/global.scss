@@ -519,13 +519,20 @@ body {
 ///////// FOOTER STUFF /////////////////
 .social_icons {
     padding-top: 5em;
-    p {
+    div {
         text-align: center;
+        display: flex;
+        flex-flow: column;
+        height: 160px;
         img {
             max-width: 120px;
         }
     }
+    .hidden-text {
+        display: none;
+    }
 }
+
 .footer {
     .section_caption {
         text-align: center;
@@ -571,11 +578,16 @@ body {
     border: none;
     background: transparent;
 }
+figure {
+    position: relative;
+}
 figure figcaption {
     padding: 0.75rem;
     color: $headline;
     background-color: $peachy;
     text-align: center;
+    position: relative;
+    top: -50px;
 }
 
 /////////////// FUTURE GOALS //////////////////////

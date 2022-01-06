@@ -17,6 +17,7 @@ let {description} = Astro.props;
 	<link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <!-- START BODY -->
@@ -145,15 +146,16 @@ let {description} = Astro.props;
                         </form>
                     </div>
                     <div class="top_bottom-p1 flex flex_evenly social_icons">
-                        <p>
+                        <div>
                             <a href="mailto:logan@lmurray.info"
                                 ><img
                                     class="social-icon"
                                     src="../assets/email.png"
                                     alt="Email"
                             /></a>
-                        </p>
-                        <p>
+                            <span class="hidden-text">My Email</span>
+                        </div>
+                        <div>
                             <a
                                 href="https://www.linkedin.com/in/log-mur16/"
                                 rel="noopener noreferrer"
@@ -163,9 +165,9 @@ let {description} = Astro.props;
                                     src="../assets/linkedin2.png"
                                     alt="LinkedIn Logo"
                             /></a>
-                        </p>
-
-                        <p>
+                            <span class="hidden-text">LinkedIn</span>
+                        </div>
+                        <div>
                             <a
                                 href="https://github.com/lpmurray16"
                                 rel="noopener noreferrer"
@@ -175,8 +177,9 @@ let {description} = Astro.props;
                                     src="../assets/github.png"
                                     alt="GitHub Logo"
                             /></a>
-                        </p>
-                        <p>
+                            <span class="hidden-text">GitHub</span>
+                        </div>
+                        <div>
                             <a
                                 href="https://codepen.io/lpmurray16"
                                 rel="noopener noreferrer"
@@ -186,7 +189,8 @@ let {description} = Astro.props;
                                     src="../assets/coding.png"
                                     alt="Coding"
                             /></a>
-                        </p>
+                            <span class="hidden-text">CodePen</span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -198,6 +202,10 @@ let {description} = Astro.props;
     <!-- START SCRIPTS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src={Astro.resolve('../scripts/main.js')}></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

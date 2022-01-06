@@ -43,3 +43,9 @@ new Glide(".glide", {
         },
     },
 }).mount();
+
+$(function () {
+    $(".social_icons div").hover(function () {
+        $(this).children(".hidden-text").slideToggle();
+    });
+});

@@ -613,12 +613,24 @@ body {
   padding-top: 5em;
 }
 
-.social_icons p {
+.social_icons div {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  height: 160px;
 }
 
-.social_icons p img {
+.social_icons div img {
   max-width: 120px;
+}
+
+.social_icons .hidden-text {
+  display: none;
 }
 
 .footer .section_caption {
@@ -681,11 +693,17 @@ body {
   background: transparent;
 }
 
+figure {
+  position: relative;
+}
+
 figure figcaption {
   padding: 0.75rem;
   color: #fffffe;
   background-color: #f25f4c;
   text-align: center;
+  position: relative;
+  top: -50px;
 }
 
 .zigzag-timeline__item {
