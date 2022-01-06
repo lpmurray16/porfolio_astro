@@ -1,0 +1,202 @@
+---
+let {title} = Astro.props;
+let {description} = Astro.props;
+---
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>{title}</title>
+    <meta name="description" content={description}>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	<link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.6.6/glider.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+
+<!-- START BODY -->
+<body>
+    <!-- START NAVIGATION BAR -->
+    <!-- HEADER -->
+        <div id="top"></div>
+        <!--Top anchor-->
+        <div class="header">
+            <!-- top left -->
+            <div class="icon_title">
+                <a id="home_icon" href="/"
+                    ><img src="assets/site_logo.png" alt="Icon" class="icon"
+                /></a>
+            </div>
+            <!-- top right -->
+            <nav class="desktop-nav">
+                <ul class="nav_list">
+                    <li class="list_item">
+                        <a href="/">Home</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="/about-me">About Me</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="/projects">Projects</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="/future-goals">Future Goals</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Hamburger Menu Start -->
+            <div class="menu__container flex flex_center-all">
+                <i class="open__nav hamburger__icon"></i>
+                <p class="menu__text">MENU</p>
+            </div>
+            <div class="cover off_canvas-x">
+                <!-- Backdrop -->
+                <div class="cover__overlay"></div>
+
+                <!-- Sidebar -->
+                <div class="cover__sidebar">
+                    <!-- the close button -->
+                    <button class="close__nav">
+                        <div class="button__line button__line--first"></div>
+                        <div class="button__line button__line--second"></div>
+                    </button>
+                    <!-- The nav inside -->
+                    <nav class="sidebar_nav">
+                        <ul class="sidebar_nav_list">
+                            <a href="/"><li class="list_item">Home</li></a>
+                            <a href="/about-me"
+                                ><li class="list_item">About Me</li></a
+                            >
+                            <a href="/projects"
+                                ><li class="list_item">Projects</li></a
+                            >
+                            <a href="/future-goals">
+                                <li class="list_item">Future Goals</li></a
+                            >
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- END HEADER -->
+
+
+    <!-- WHERE CONTENT FROM PAGES WILL GO -->
+    <slot></slot>
+	
+
+		
+    <!-- START FOOTER SECTION -->
+    <footer>
+    <section class="bg-dark footer">
+                <h1 class="section_header">Contact Info</h1>
+                <h3 class="section_caption">
+                    Please reach out to me with any questions.
+                </h3>
+                <div class="flex flex_center flex_col">
+                    <div
+                        class="flex flex_col col_50-100 flex_center-all margin-auto"
+                    >
+                        <form name="contact" method="POST" data-netlify="true">
+                            <div>
+                                <p>
+                                    <label>Your Name: </label
+                                    ><input
+                                        type="text"
+                                        name="name"
+                                        placeholder="John Doe"
+                                    />
+                                </p>
+                                <p>
+                                    <label>Your Email: </label
+                                    ><input
+                                        type="email"
+                                        name="email"
+                                        placeholder="youremail@email.com"
+                                    />
+                                </p>
+                            </div>
+                            <p>
+                                <label>Subject: </label
+                                ><input
+                                    type="text"
+                                    name="subject"
+                                    placeholder="Question/Opportunity/Comment/etc."
+                                />
+                            </p>
+                            <p>
+                                <label>Message: </label
+                                ><textarea
+                                    name="message"
+                                    placeholder="Description of why you are reaching out..."
+                                ></textarea>
+                            </p>
+                            <p class="txt-center submit">
+                                <button class="cta" type="submit">
+                                    Submit
+                                </button>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="top_bottom-p1 flex flex_evenly social_icons">
+                        <p>
+                            <a href="mailto:logan@lmurray.info"
+                                ><img
+                                    class="social-icon"
+                                    src="../assets/email.png"
+                                    alt="Email"
+                            /></a>
+                        </p>
+                        <p>
+                            <a
+                                href="https://www.linkedin.com/in/log-mur16/"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                ><img
+                                    class="social-icon"
+                                    src="../assets/linkedin2.png"
+                                    alt="LinkedIn Logo"
+                            /></a>
+                        </p>
+
+                        <p>
+                            <a
+                                href="https://github.com/lpmurray16"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                ><img
+                                    class="social-icon"
+                                    src="../assets/github.png"
+                                    alt="GitHub Logo"
+                            /></a>
+                        </p>
+                        <p>
+                            <a
+                                href="https://codepen.io/lpmurray16"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                ><img
+                                    class="social-icon"
+                                    src="../assets/coding.png"
+                                    alt="Coding"
+                            /></a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <div class="flex flex_center-all anchor-top">
+                <a href="#top"><button class="cta">To Top</button></a>
+            </div>
+    </footer>
+
+    <!-- START SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.6.6/glider.min.js"></script>
+    <script src={Astro.resolve('../scripts/main.js')}></script>
+</body>
+</html>
