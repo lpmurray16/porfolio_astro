@@ -433,9 +433,20 @@ body {
 }
 
 .sidebar_nav_list .list_item {
-  /* background: orange; */
   padding: 2em 1em;
   font-size: 1.2em;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  background: transparent;
+}
+
+.sidebar_nav_list .list_item:hover, .sidebar_nav_list .list_item:focus {
+  -webkit-box-shadow: inset 0 -5.75em 0 0 #f25f4c;
+          box-shadow: inset 0 -5.75em 0 0 #f25f4c;
+}
+
+.sidebar_nav_list a:active li {
+  background: #e53170;
 }
 
 .close__nav {
@@ -877,6 +888,15 @@ figure figcaption {
     background: linear-gradient(155deg, #ff8906 16%, #f25f4c 53%, #e53170 92%);
     padding: 0 1vw;
     border-radius: 4px;
+  }
+  .cover__sidebar {
+    height: 467px;
+    right: 0;
+    position: fixed;
+    top: 50%;
+    border-radius: 8px 0 0 8px;
+    width: 200px;
+    background-color: #0f0e17;
   }
   /* width of scrollbar */
   ::-webkit-scrollbar {
