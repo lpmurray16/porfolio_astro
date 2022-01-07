@@ -847,7 +847,7 @@ figure figcaption {
 }
 
 @media (max-width: 767.98px) {
-  .social_icons p img {
+  .social_icons div img {
     max-width: 80%;
   }
 }

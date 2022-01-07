@@ -739,7 +739,7 @@ figure figcaption {
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
     .social_icons {
-        p {
+        div {
             img {
                 max-width: 80%;
             }
