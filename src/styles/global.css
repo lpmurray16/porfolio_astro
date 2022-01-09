@@ -596,6 +596,10 @@ body {
   height: 100%;
 }
 
+.card_bottom a:hover {
+  color: #f25f4c !important;
+}
+
 .card img {
   max-width: 64px;
   max-height: 64px;

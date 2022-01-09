@@ -502,6 +502,9 @@ body {
         flex-flow: column;
         justify-content: space-between;
         height: 100%;
+        a:hover {
+            color: $peachy !important;
+        }
     }
     & img {
         max-width: 64px;
